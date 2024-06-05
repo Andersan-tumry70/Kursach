@@ -57,7 +57,7 @@ void RegistrationDialog::on_registerButton_clicked()
 
     QRegularExpression nameRegex("^[а-яёА-ЯЁ]+$");
     if (!nameRegex.match(family).hasMatch() || !nameRegex.match(name).hasMatch() || !nameRegex.match(patronymic).hasMatch()) {
-        QMessageBox::warning(this, "Ошибка", "ФИО должны содержать только русские буквы, первая буква заглавная.");
+        QMessageBox::warning(this, "Ошибка", "ФИО должны содержать только русские буквы.");
         return;
     }
 
